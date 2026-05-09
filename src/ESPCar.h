@@ -5,10 +5,9 @@
 
 class ESPCar {
   public:
-    // Constructor
-    ESPCar(int in1, int in2, int in3, int in4, int enA = -1, int enB = -1);
+    ESPCar(int in1, int in2, int in3, int in4);
+    ESPCar(int in1, int in2, int in3, int in4, int ena, int enb);
 
-    // Initialization
     void begin();
 
     // Movement
@@ -18,13 +17,26 @@ class ESPCar {
     void right();
     void stop();
 
-    // Speed Control (0–255)
+    // Speed
     void setSpeed(int speed);
+
+    // Bluetooth Debug
+    void beginBTDebug(long baud = 9600);
+    void handleBTDebug();
+
+    // WiFi (hidden internally)
+    void beginWiFi(const char* ssid, const char* password);
+    String getWiFiRequest();
+    void sendWiFiResponse();
 
   private:
     int _in1, _in2, _in3, _in4;
-    int _enA, _enB;
+    int _ena, _enb;
+    bool _usePWM;
+
     int _speed;
+
+    void move(int a, int b, int c, int d);
 };
 
 #endif
