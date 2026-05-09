@@ -1,5 +1,14 @@
 # ESP-CAR 🚗
 
+![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
+
+
+
+# ESP-CAR 🚗
+
 ESP-CAR is an ESP32-based Arduino library to control a robot car using:
 - 🔵 Bluetooth (Serial)
 - 🌐 WiFi (Web Control)
