@@ -5,6 +5,9 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-orange)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
+## Author
+Abdul Rafeul Mallick
+
 
 
 # ESP-CAR 🚗
@@ -44,5 +47,4 @@ void loop() {
 
 
 
-## Author
-Abdul Rafeul Mallick
+
