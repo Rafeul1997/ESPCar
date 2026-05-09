@@ -5,6 +5,8 @@
 
 class ESPCar {
   public:
+    // Constructors
+    ESPCar(); // For debug (no pins)
     ESPCar(int in1, int in2, int in3, int in4);
     ESPCar(int in1, int in2, int in3, int in4, int ena, int enb);
 
@@ -20,11 +22,7 @@ class ESPCar {
     // Speed
     void setSpeed(int speed);
 
-    // Bluetooth Debug
-    void beginBTDebug(long baud = 9600);
-    void handleBTDebug();
-
-    // WiFi (hidden internally)
+    // WiFi
     void beginWiFi(const char* ssid, const char* password);
     String getWiFiRequest();
     void sendWiFiResponse();
@@ -32,9 +30,8 @@ class ESPCar {
   private:
     int _in1, _in2, _in3, _in4;
     int _ena, _enb;
-    bool _usePWM;
-
-    int _speed;
+    bool _usePWM = false;
+    int _speed = 150;
 
     void move(int a, int b, int c, int d);
 };
