@@ -1,23 +1,27 @@
 #include "ESPCar.h"
 #include <WiFi.h>
 
-// WiFi server (internal)
+// Internal WiFi server
 WiFiServer server(80);
 WiFiClient client;
 
-// Constructors
-ESPCar::ESPCar(int in1, int in2, int in3, int in4) {
-  _in1 = in1; _in2 = in2; _in3 = in3; _in4 = in4;
+// Default constructor (for debug)
+ESPCar::ESPCar() {
   _usePWM = false;
 }
 
+// 4-pin constructor
+ESPCar::ESPCar(int in1, int in2, int in3, int in4) {
+  _in1 = in1; _in2 = in2; _in3 = in3; _in4 = in4;
+}
+
+// 6-pin constructor (with speed control)
 ESPCar::ESPCar(int in1, int in2, int in3, int in4, int ena, int enb) {
   _in1 = in1; _in2 = in2; _in3 = in3; _in4 = in4;
   _ena = ena; _enb = enb;
   _usePWM = true;
 }
 
-// Setup
 void ESPCar::begin() {
   pinMode(_in1, OUTPUT);
   pinMode(_in2, OUTPUT);
@@ -32,7 +36,6 @@ void ESPCar::begin() {
   stop();
 }
 
-// Movement logic
 void ESPCar::move(int a, int b, int c, int d) {
   digitalWrite(_in1, a);
   digitalWrite(_in2, b);
@@ -46,7 +49,6 @@ void ESPCar::left()    { move(LOW, HIGH, HIGH, LOW); }
 void ESPCar::right()   { move(HIGH, LOW, LOW, HIGH); }
 void ESPCar::stop()    { move(LOW, LOW, LOW, LOW); }
 
-// Speed
 void ESPCar::setSpeed(int speed) {
   _speed = constrain(speed, 0, 255);
 
@@ -56,26 +58,13 @@ void ESPCar::setSpeed(int speed) {
   }
 }
 
-// BT Debug
-void ESPCar::beginBTDebug(long baud) {
-  Serial.begin(baud);
-}
-
-void ESPCar::handleBTDebug() {
-  if (Serial.available()) {
-    char cmd = Serial.read();
-    Serial.print("Received: ");
-    Serial.println(cmd);
-  }
-}
-
-// WiFi Setup
+// WiFi setup
 void ESPCar::beginWiFi(const char* ssid, const char* password) {
   WiFi.softAP(ssid, password);
   server.begin();
 }
 
-// Get Request
+// Read request
 String ESPCar::getWiFiRequest() {
   client = server.available();
 
@@ -87,7 +76,7 @@ String ESPCar::getWiFiRequest() {
   return "";
 }
 
-// Send Response
+// Send simple webpage
 void ESPCar::sendWiFiResponse() {
   if (client) {
     client.println("HTTP/1.1 200 OK");
