@@ -8,6 +8,8 @@
 
 
 # ESP-CAR 🚗
+## Author
+Abdul Rafeul Mallick
 
 ESP-CAR is an ESP32-based Arduino library to control a robot car using:
 - 🔵 Bluetooth (Serial)
