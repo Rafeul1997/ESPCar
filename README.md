@@ -1,4 +1,4 @@
-![ESPCar Banner](https://raw.githubusercontent.com/Rafeul1997/ESPCar/main/image.png)
+
 
 # ESPCar 🚗
 
