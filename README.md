@@ -1,9 +1,10 @@
-# 🚗 ESPCar – ESP32 Smart RC Car Library
+# ESPCar – ESP32 Smart RC Car Library
 
 ![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
+![WiFi Control](https://img.shields.io/badge/WiFi-Control-00AEEF)
+![Bluetooth Control](https://img.shields.io/badge/Bluetooth-Control-4A90E2)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![WiFi](https://img.shields.io/badge/WiFi-Enabled-blue)
-![Bluetooth](https://img.shields.io/badge/Bluetooth-Enabled-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
 ---
 
