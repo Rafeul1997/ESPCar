@@ -4,7 +4,6 @@
 ![WiFi Control](https://img.shields.io/badge/WiFi-Control-00AEEF)
 ![Bluetooth Control](https://img.shields.io/badge/Bluetooth-Control-4A90E2)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
 ---
 
