@@ -1,6 +1,4 @@
-![ESPCar Banner](banner.png)
-
-# ESPCar 🚗
+# ESPCar
 
 ![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
