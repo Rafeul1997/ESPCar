@@ -1,17 +1,6 @@
-# ESPCar – ESP32 Smart RC Car Library
+# 🚗 ESPCar – ESP32 Smart RC Car Library
 
----
-
-## 📌 Overview
-
-ESPCar is an ESP32-based Arduino library to control a robot car using:
-
-- 🔵 Bluetooth (Serial Control)
-- 🌐 WiFi (Web Browser Control)
-- ⚡ PWM Speed Control
-- 🔧 Simple beginner-friendly API
-
----
+ESPCar is an Arduino library for ESP32 that enables WiFi and Bluetooth control of a robot car with speed and direction management.
 
 ![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
 ![WiFi Control](https://img.shields.io/badge/WiFi-Control-00AEEF)
