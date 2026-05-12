@@ -1,15 +1,5 @@
 # ESPCar – ESP32 Smart RC Car Library
 
-![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
-![WiFi Control](https://img.shields.io/badge/WiFi-Control-00AEEF)
-![Bluetooth Control](https://img.shields.io/badge/Bluetooth-Control-4A90E2)
-![License](https://img.shields.io/badge/License-MIT-green)
-
----
-
-## 👨‍💻 Author
-Abdul Rafeul Mallick
-
 ---
 
 ## 📌 Overview
@@ -22,6 +12,18 @@ ESPCar is an ESP32-based Arduino library to control a robot car using:
 - 🔧 Simple beginner-friendly API
 
 ---
+
+![ESP32](https://img.shields.io/badge/ESP32-Compatible-blue)
+![WiFi Control](https://img.shields.io/badge/WiFi-Control-00AEEF)
+![Bluetooth Control](https://img.shields.io/badge/Bluetooth-Control-4A90E2)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
+## 👨‍💻 Author
+Abdul Rafeul Mallick
+
+
 
 ## ✨ Features
 
